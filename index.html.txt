@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Game Title</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0f;
+      color: #e0e0e0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle shifting neon background */
+    header::before, header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(0,255,229,0.12) 0%,
+        transparent 40%,
+        transparent 60%,
+        rgba(0,255,229,0.12) 100%
+      );
+      background-size: 200% 200%;
+      animation: neonShift 12s infinite linear;
+      z-index: 0;
+    }
+    header::after {
+      background: linear-gradient(
+        240deg,
+        rgba(138,43,226,0.12) 0%,
+        transparent 40%,
+        transparent 60%,
+        rgba(138,43,226,0.12) 100%
+      );
+      animation-direction: reverse;
+    }
+    @keyframes neonShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ffe5;
+      text-shadow: 0 0 15px #00ffe5;
+      margin-bottom: 1rem;
+      z-index: 1;
+      position: relative;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #aaa;
+      z-index: 1;
+      position: relative;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .media-gallery img, .media-gallery iframe {
+      width: 100%;
+      border: 2px solid #222;
+      border-radius: 8px;
+      background: #111;
+      box-shadow: 0 0 15px rgba(0,255,229,0.2);
+    }
+
+    .about {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .links a {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      background: #111;
+      color: #00ffe5;
+      border: 1px solid #00ffe5;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .links a:hover {
+      background: #00ffe5;
+      color: #111;
+      box-shadow: 0 0 15px #00ffe5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Your Game Title</h1>
+    <p>A dark future. A grim world. A spark of forbidden magic.</p>
+  </header>
+
+  <section class="media">
+    <h2 style="text-align:center; margin-bottom:1.5rem; color:#00ffe5;">Media Showcase</h2>
+    <div class="media-gallery">
+
+      <!-- Banner Image -->
+      <img src="banner.jpg" alt="Banner Image" style="grid-column: 1 / -1; width:100%; height:auto; border-radius:8px;">
+
+      <!-- GIF below banner -->
+      <img src="ec7e8976-2654-483e-8401-dfd792288007.gif" alt="Gameplay GIF" style="grid-column: 1 / -1; width:100%; height:auto; border-radius:8px;">
+
+      <!-- 4 Additional Images -->
+      <img src="apartment.jpg" alt="Screenshot 1">
+      <img src="splashscreenred.jpg" alt="Screenshot 2">
+      <img src="market.jpg" alt="Screenshot 3">
+      <img src="veilfalltwotone.jpg" alt="Screenshot 4">
+
+    </div>
+  </section>
+
+  <section class="about">
+    <h2 style="color:#00ffe5; margin-bottom:1rem;">About the Game</h2>
+    <p>
+      Step into a dystopian cyberpunk future where ancient magic flickers in the shadows of mega-cities.
+      This is only the beginning — join us on the journey as development continues.
+    </p>
+  </section>
+
+  <section class="community">
+    <h2 style="color:#00ffe5; text-align:center; margin-bottom:1rem;">Join the Community</h2>
+    <div class="links">
+      <a href="#">Discord</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Game Studio. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
