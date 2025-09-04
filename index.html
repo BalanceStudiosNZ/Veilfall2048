@@ -50,19 +50,17 @@
       gap: 2rem;
     }
 
-    /* Full-width GIF as background */
+    /* Full-width GIF using <img> with object-fit */
     .full-width-gif {
       width: 100%;
-      height: 0;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
+      height: 400px; /* adjust height as needed */
+      object-fit: cover;
       border-radius: 8px;
-      background: url("images/Teaser Gif.gif") center center / cover no-repeat;
       box-shadow: 0 0 15px rgba(0,255,229,0.2);
-      position: relative;
     }
 
     /* Full-width images */
-    .media-gallery img {
+    .media-gallery img:not(.full-width-gif) {
       width: 100%;
       height: auto;
       border: 2px solid #222;
@@ -114,7 +112,6 @@
     <h2 style="color:#00ffe5; margin-bottom:1rem;">About the Game</h2>
     <p>
       Step into the not too distant, dark future, where ancient magic lies all but erased in the shadows and mud of a dystopic, stratified society of humans and races from beyond the Veil; all vying to survive and find control in the hollow, Military-Industrial Slumtopia of 2048.
-      
       This is only the beginning — join us on the journey as development continues.
     </p>
   </section>
@@ -125,8 +122,28 @@
     <div class="media-gallery">
 
       <!-- Full-width GIF -->
-      <div class="full-width-gif"></div>
+      <img src="images/Teaser Gif.gif" alt="Teaser GIF" class="full-width-gif">
 
       <!-- Stacked Images -->
-      <img src="image
+      <img src="images/apartment.jpg" alt="apartment">
+      <img src="images/splashscreenred.jpg" alt="splashscreenred">
+      <img src="images/market.jpg" alt="market">
+      <img src="images/veilfalltwotone.png" alt="veilfalltwotone">
 
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community">
+    <h2 style="color:#00ffe5; text-align:center; margin-bottom:1rem;">Join the Community</h2>
+    <div class="links">
+      <a href="#">Discord</a>
+      <a href="https://www.youtube.com/@BalanceStudios-Inc">YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Balance Studios. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
