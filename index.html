@@ -15,64 +15,44 @@
       overflow-x: hidden;
     }
 
-    header {
-      min-height: 100vh;
+    /* Hero Section with Banner Background */
+    .hero {
+      height: 100vh; /* full screen height */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
-      overflow: hidden;
+      background: url("images/banner.jpg") no-repeat center center;
+      background-size: cover;
     }
 
-    /* Subtle shifting neon background */
-    header::before, header::after {
-      content: '';
+    /* Optional dark overlay for readability */
+    .hero::before {
+      content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(
-        120deg,
-        rgba(0,255,229,0.12) 0%,
-        transparent 40%,
-        transparent 60%,
-        rgba(0,255,229,0.12) 100%
-      );
-      background-size: 200% 200%;
-      animation: neonShift 12s infinite linear;
-      z-index: 0;
-    }
-    header::after {
-      background: linear-gradient(
-        240deg,
-        rgba(138,43,226,0.12) 0%,
-        transparent 40%,
-        transparent 60%,
-        rgba(138,43,226,0.12) 100%
-      );
-      animation-direction: reverse;
-    }
-    @keyframes neonShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
 
-    header h1 {
+    .hero h1 {
       font-size: 3rem;
       color: #00ffe5;
       text-shadow: 0 0 15px #00ffe5;
       margin-bottom: 1rem;
-      z-index: 1;
       position: relative;
+      z-index: 2;
     }
-    header p {
+
+    .hero p {
       font-size: 1.2rem;
       max-width: 600px;
       margin: 0 auto;
       color: #aaa;
-      z-index: 1;
       position: relative;
+      z-index: 2;
     }
 
     section {
@@ -131,10 +111,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+
+  <!-- Hero Section with Banner Background -->
+  <section class="hero">
     <h1>Veilfall 2048</h1>
     <p>A dark future. A grim world. A spark of forbidden magic.</p>
-  </header>
+  </section>
 
   <section class="media">
     <h2 style="text-align:center; margin-bottom:1.5rem; color:#00ffe5;">Media Showcase</h2>
@@ -176,9 +158,4 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
 
