@@ -16,17 +16,12 @@
     }
 
     /* Hero Section with Banner Background */
-    .hero {
-      height: 60vh; /* full screen height */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      background: url("images/banner.jpg") no-repeat center center;
-      background-size: cover;
-    }
+   .hero {
+  background: url("images/banner.jpg") no-repeat center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
 
     /* Optional dark overlay for readability */
     .hero::before {
@@ -158,5 +153,6 @@
   </footer>
 </body>
 </html>
+
 
 
