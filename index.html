@@ -50,21 +50,23 @@
       gap: 2rem;
     }
 
-    .media-gallery img, .media-gallery iframe {
+    /* Full-width GIF as background */
+    .full-width-gif {
+      width: 100%;
+      height: 400px; /* adjust as needed */
+      border-radius: 8px;
+      background: url("images/Teaser Gif.gif") center center / cover no-repeat;
+      box-shadow: 0 0 15px rgba(0,255,229,0.2);
+    }
+
+    /* Full-width images */
+    .media-gallery img {
       width: 100%;
       height: auto;
       border: 2px solid #222;
       border-radius: 8px;
       background: #111;
       box-shadow: 0 0 15px rgba(0,255,229,0.2);
-    }
-
-    /* Make the GIF fill the row */
-    .media-gallery .full-width {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
     }
 
     .links {
@@ -110,7 +112,7 @@
     <h2 style="color:#00ffe5; margin-bottom:1rem;">About the Game</h2>
     <p>
       <!-- Write your descriptor here -->
-      Step into a dystopian cyberpunk world where ancient magic flickers in the shadows of mega-cities. 
+      Step into the not too distant, dark future, where ancient magic lies all but erased in the shadows and mud of a dystopic, stratified society of humans and races from beyond the Veil. 
       This is only the beginning — join us on the journey as development continues.
     </p>
   </section>
@@ -120,14 +122,14 @@
     <h2 style="text-align:center; margin-bottom:1.5rem; color:#00ffe5;">Gallery</h2>
     <div class="media-gallery">
 
-      <!-- GIF below banner -->
-      <img src="images/Teaser Gif.gif" alt="Teaser" class="full-width">
+      <!-- Full-width GIF -->
+      <div class="full-width-gif"></div>
 
       <!-- Stacked Images -->
-      <img src="images/apartment.jpg" alt="apartment" class="full-width">
-      <img src="images/splashscreenred.jpg" alt="splashscreenred" class="full-width">
-      <img src="images/market.jpg" alt="market" class="full-width">
-      <img src="images/veilfalltwotone.png" alt="veilfalltwotone" class="full-width">
+      <img src="images/apartment.jpg" alt="apartment">
+      <img src="images/splashscreenred.jpg" alt="splashscreenred">
+      <img src="images/market.jpg" alt="market">
+      <img src="images/veilfalltwotone.png" alt="veilfalltwotone">
 
     </div>
   </section>
