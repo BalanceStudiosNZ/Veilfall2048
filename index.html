@@ -50,13 +50,24 @@
       gap: 2rem;
     }
 
-    /* Full-width GIF using <img> with object-fit */
-    .full-width-gif {
+    /* Full-width GIF wrapper */
+    .gif-wrapper {
       width: 100%;
       height: 400px; /* adjust height as needed */
-      object-fit: cover;
+      overflow: hidden;
       border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,255,229,0.2);
+      box-shadow: 0 0 15px rgba(0,207,207,0.2);
+      position: relative;
+    }
+
+    .gif-wrapper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
     }
 
     /* Full-width images */
@@ -66,7 +77,7 @@
       border: 2px solid #222;
       border-radius: 8px;
       background: #111;
-      box-shadow: 0 0 15px rgba(0,255,229,0.2);
+      box-shadow: 0 0 15px rgba(0,207,207,0.2);
     }
 
     .links {
@@ -80,15 +91,15 @@
       border-radius: 8px;
       text-decoration: none;
       background: #111;
-      color: #00ffe5;
-      border: 1px solid #00ffe5;
+      color: #00cfcf;
+      border: 1px solid #00cfcf;
       transition: 0.3s;
       font-weight: bold;
     }
     .links a:hover {
-      background: #00ffe5;
+      background: #00cfcf;
       color: #111;
-      box-shadow: 0 0 15px #00ffe5;
+      box-shadow: 0 0 15px #00cfcf;
     }
 
     footer {
@@ -105,46 +116,4 @@
   <!-- Hero Section with Banner Image -->
   <section class="hero">
     <img src="images/banner.jpg" alt="banner" class="hero-banner">
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section">
-    <h2 style="color:#00ffe5; margin-bottom:1rem;">About the Game</h2>
-    <p>
-      Step into the not too distant, dark future, where ancient magic lays strangled in the shadows and mud of a dystopic, military-industrial Slumtopia of the year 2048.
-      This is only the beginning — join us on the journey as development continues.
-    </p>
-  </section>
-
-  <!-- Gallery Section -->
-  <section class="media">
-    <h2 style="text-align:center; margin-bottom:1.5rem; color:#00ffe5;">Gallery</h2>
-    <div class="media-gallery">
-
-      <!-- Full-width GIF -->
-      <img src="images/Teaser Gif.gif" alt="Teaser GIF" class="full-width-gif">
-
-      <!-- Stacked Images -->
-      <img src="images/apartment.jpg" alt="apartment">
-      <img src="images/splashscreenred.jpg" alt="splashscreenred">
-      <img src="images/market.jpg" alt="market">
-      <img src="images/veilfalltwotone.png" alt="veilfalltwotone">
-
-    </div>
-  </section>
-
-  <!-- Community Section -->
-  <section class="community">
-    <h2 style="color:#00ffe5; text-align:center; margin-bottom:1rem;">Join the Community</h2>
-    <div class="links">
-      <a href="#">Discord</a>
-      <a href="https://www.youtube.com/@BalanceStudios-Inc">YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Balance Studios. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
-
+  </sect
