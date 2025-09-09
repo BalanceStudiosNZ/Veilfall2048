@@ -35,19 +35,12 @@
       margin: auto;
     }
 
-    .about-section {
+    .about-section, .studio-section {
       text-align: center;
       font-size: 1.2rem;
       max-width: 800px;
       margin: 2rem auto;
       color: #e0e0e0;
-    }
-
-    /* Headings */
-    h2 {
-      color: #00cfcf;
-      margin-bottom: 1rem;
-      text-align: center;
     }
 
     /* Media / Gallery Section */
@@ -85,6 +78,17 @@
       border-radius: 8px;
       background: #111;
       box-shadow: 0 0 15px rgba(0,207,207,0.2);
+    }
+
+    /* Animation setup */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .links {
@@ -127,7 +131,7 @@
 
   <!-- About Section -->
   <section class="about-section">
-    <h2>About the Game</h2>
+    <h2 style="color:#00cfcf; margin-bottom:1rem;">About the Game</h2>
     <p>
       Step into the not too distant, dark future, where ancient magic lays strangled in the shadows and mud of a dystopic, military-industrial Slumtopia of the year 2048.
       This is only the beginning — join us on the journey as development continues.
@@ -136,34 +140,22 @@
 
   <!-- Gallery Section -->
   <section class="media">
-    <h2>Gallery</h2>
+    <h2 style="text-align:center; margin-bottom:1.5rem; color:#00cfcf;">Gallery</h2>
     <div class="media-gallery">
 
       <!-- Full-width GIF using wrapper -->
-      <div class="gif-wrapper">
+      <div class="gif-wrapper fade-in-up">
         <img src="images/Teaser Gif.gif" alt="Teaser GIF">
       </div>
 
       <!-- Stacked Images -->
-      <img src="images/apartment.jpg" alt="apartment">
-      <img src="images/splashscreenred.jpg" alt="splashscreenred">
-      <img src="images/market.jpg" alt="market">
-      <img src="images/veilfalltwotone.png" alt="veilfalltwotone">
+      <img src="images/apartment.jpg" alt="apartment" class="fade-in-up">
+      <img src="images/splashscreenred.jpg" alt="splashscreenred" class="fade-in-up">
+      <img src="images/market.jpg" alt="market" class="fade-in-up">
+      <img src="images/veilfalltwotone.png" alt="veilfalltwotone" class="fade-in-up">
 
     </div>
   </section>
 
-  <!-- Community Section -->
-  <section class="community">
-    <h2>Join the Community</h2>
-    <div class="links">
-      <a href="#">Discord</a>
-      <a href="https://www.youtube.com/@BalanceStudios-Inc">YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Balance Studios. All Rights Reserved.</p>
-  </footer>
-</body>
-</html>
+  <!-- Studio Section -->
+  <section class="studio-section"
